@@ -1,0 +1,21 @@
+version: '3.0'
+services:
+  api_server:
+    #image: siangyeh8818/flask-api:beta-v2
+    container_name: flask-server
+    restart: always
+    depends_on:
+    - "mysql"
+    ports:
+      - "80:8888"
+    environment:
+      HOST_IP: "192.168.0.100"
+      MYSQL_PASSWORD: "Test88321"
+  mysql:
+    image: mysql:5.7.32
+    container_name: test_mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "Test88321"
