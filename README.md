@@ -4,6 +4,8 @@ This is just a simple demo how to develop a webservice using python, flask and m
 
 ### How to run
 ```
+調整 docker-compose.yml
+將HOST_IP 調整為你的機器ip
 docker-compose -f docker-compose.yml up -d
 ```
 
